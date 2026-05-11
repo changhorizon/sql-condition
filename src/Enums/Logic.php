@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Enums;
+namespace ChangHorizon\SqlCondition\Enums;
 
 enum Logic: string
 {

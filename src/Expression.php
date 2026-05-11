@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition;
+namespace ChangHorizon\SqlCondition;
 
-use Hizpark\SqlCondition\Interfaces\ExpressionInterface;
+use ChangHorizon\SqlCondition\Interfaces\ExpressionInterface;
 
 /**
  * SQL 条件表达式的静态工厂类

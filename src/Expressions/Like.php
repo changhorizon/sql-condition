@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Expressions;
+namespace ChangHorizon\SqlCondition\Expressions;
 
-use Hizpark\SqlCondition\Enums\Anchor;
-use Hizpark\SqlCondition\Enums\Logic;
-use Hizpark\SqlCondition\Enums\Operator;
-use Hizpark\SqlCondition\Interfaces\ExpressionInterface;
+use ChangHorizon\SqlCondition\Enums\Anchor;
+use ChangHorizon\SqlCondition\Enums\Logic;
+use ChangHorizon\SqlCondition\Enums\Operator;
+use ChangHorizon\SqlCondition\Interfaces\ExpressionInterface;
 use Override;
 
 class Like implements ExpressionInterface

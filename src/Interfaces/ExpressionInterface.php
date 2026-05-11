@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Interfaces;
+namespace ChangHorizon\SqlCondition\Interfaces;
 
-use Hizpark\SqlCondition\Enums\Logic;
+use ChangHorizon\SqlCondition\Enums\Logic;
 
 interface ExpressionInterface
 {

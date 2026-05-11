@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Tests;
+namespace ChangHorizon\SqlCondition\Tests;
 
-use Hizpark\SqlCondition\Enums\Anchor;
-use Hizpark\SqlCondition\Expression;
-use Hizpark\SqlCondition\Interfaces\ExpressionInterface;
+use ChangHorizon\SqlCondition\Enums\Anchor;
+use ChangHorizon\SqlCondition\Expression;
+use ChangHorizon\SqlCondition\Interfaces\ExpressionInterface;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
@@ -56,21 +56,21 @@ class ExpressionTest extends TestCase
 
     public function testLikeWithLeftAnchor(): void
     {
-        $expr = new \Hizpark\SqlCondition\Expressions\Like('title', 'hello', Anchor::LEFT);
+        $expr = new \ChangHorizon\SqlCondition\Expressions\Like('title', 'hello', Anchor::LEFT);
         $this->assertSame('title LIKE :value_title', $expr->getString());
         $this->assertSame([':value_title' => ':hello%'], $expr->getParams());
     }
 
     public function testLikeWithRightAnchor(): void
     {
-        $expr = new \Hizpark\SqlCondition\Expressions\Like('title', 'world', Anchor::RIGHT);
+        $expr = new \ChangHorizon\SqlCondition\Expressions\Like('title', 'world', Anchor::RIGHT);
         $this->assertSame('title LIKE :value_title', $expr->getString());
         $this->assertSame([':value_title' => '%:world'], $expr->getParams());
     }
 
     public function testLikeWithoutAnchor(): void
     {
-        $expr = new \Hizpark\SqlCondition\Expressions\Like('title', 'test', null);
+        $expr = new \ChangHorizon\SqlCondition\Expressions\Like('title', 'test', null);
         $this->assertSame('title LIKE :value_title', $expr->getString());
         $this->assertSame([':value_title' => '%:test%'], $expr->getParams());
     }

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Tests;
+namespace ChangHorizon\SqlCondition\Tests;
 
-use Hizpark\SqlCondition\Condition;
-use Hizpark\SqlCondition\Enums\Logic;
-use Hizpark\SqlCondition\Expression;
+use ChangHorizon\SqlCondition\Condition;
+use ChangHorizon\SqlCondition\Enums\Logic;
+use ChangHorizon\SqlCondition\Expression;
 use PHPUnit\Framework\TestCase;
 
 class ConditionTest extends TestCase

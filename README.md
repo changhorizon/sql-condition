@@ -2,12 +2,12 @@
 
 > A PHP library for building and managing SQL WHERE conditions with a flexible, object-oriented approach.
 
-![License](https://img.shields.io/github/license/hizpark/sql-condition?style=flat-square)
-![Latest Version](https://img.shields.io/packagist/v/hizpark/sql-condition?style=flat-square)
+![License](https://img.shields.io/github/license/changhorizon/sql-condition?style=flat-square)
+![Latest Version](https://img.shields.io/packagist/v/changhorizon/sql-condition?style=flat-square)
 ![PHP Version](https://img.shields.io/badge/php-8.3--8.4-blue?style=flat-square)
 ![Static Analysis](https://img.shields.io/badge/static_analysis-PHPStan-blue?style=flat-square)
-[![codecov](https://codecov.io/gh/hizpark/sql-condition/branch/main/graph/badge.svg)](https://codecov.io/gh/hizpark/sql-condition)
-![CI](https://github.com/hizpark/sql-condition/actions/workflows/ci.yml/badge.svg?style=flat-square)
+[![codecov](https://codecov.io/gh/changhorizon/sql-condition/branch/main/graph/badge.svg)](https://codecov.io/gh/changhorizon/sql-condition)
+![CI](https://github.com/changhorizon/sql-condition/actions/workflows/ci.yml/badge.svg?style=flat-square)
 
 Build SQL WHERE clauses programmatically with a clean, type-safe, and composable expression system. Supports 16 SQL operators with named parameter binding for PDO.
 
@@ -23,7 +23,7 @@ Build SQL WHERE clauses programmatically with a clean, type-safe, and composable
 ## Installation
 
 ```bash
-composer require hizpark/sql-condition
+composer require changhorizon/sql-condition
 ```
 
 ## Directory Structure

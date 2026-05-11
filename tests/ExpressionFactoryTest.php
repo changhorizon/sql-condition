@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Tests;
+namespace ChangHorizon\SqlCondition\Tests;
 
-use Hizpark\SqlCondition\Expression;
-use Hizpark\SqlCondition\Expressions\Between;
-use Hizpark\SqlCondition\Expressions\Equal;
-use Hizpark\SqlCondition\Expressions\GreaterThan;
-use Hizpark\SqlCondition\Expressions\GreaterThanOrEqual;
-use Hizpark\SqlCondition\Expressions\In;
-use Hizpark\SqlCondition\Expressions\IsFalse;
-use Hizpark\SqlCondition\Expressions\IsNotNull;
-use Hizpark\SqlCondition\Expressions\IsNull;
-use Hizpark\SqlCondition\Expressions\IsTrue;
-use Hizpark\SqlCondition\Expressions\LessThan;
-use Hizpark\SqlCondition\Expressions\LessThanOrEqual;
-use Hizpark\SqlCondition\Expressions\Like;
-use Hizpark\SqlCondition\Expressions\NotBetween;
-use Hizpark\SqlCondition\Expressions\NotEqual;
-use Hizpark\SqlCondition\Expressions\NotIn;
-use Hizpark\SqlCondition\Expressions\NotLike;
+use ChangHorizon\SqlCondition\Expression;
+use ChangHorizon\SqlCondition\Expressions\Between;
+use ChangHorizon\SqlCondition\Expressions\Equal;
+use ChangHorizon\SqlCondition\Expressions\GreaterThan;
+use ChangHorizon\SqlCondition\Expressions\GreaterThanOrEqual;
+use ChangHorizon\SqlCondition\Expressions\In;
+use ChangHorizon\SqlCondition\Expressions\IsFalse;
+use ChangHorizon\SqlCondition\Expressions\IsNotNull;
+use ChangHorizon\SqlCondition\Expressions\IsNull;
+use ChangHorizon\SqlCondition\Expressions\IsTrue;
+use ChangHorizon\SqlCondition\Expressions\LessThan;
+use ChangHorizon\SqlCondition\Expressions\LessThanOrEqual;
+use ChangHorizon\SqlCondition\Expressions\Like;
+use ChangHorizon\SqlCondition\Expressions\NotBetween;
+use ChangHorizon\SqlCondition\Expressions\NotEqual;
+use ChangHorizon\SqlCondition\Expressions\NotIn;
+use ChangHorizon\SqlCondition\Expressions\NotLike;
 use PHPUnit\Framework\TestCase;
 
 class ExpressionFactoryTest extends TestCase

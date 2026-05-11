@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Expressions;
+namespace ChangHorizon\SqlCondition\Expressions;
 
-use Hizpark\SqlCondition\Enums\Operator;
+use ChangHorizon\SqlCondition\Enums\Operator;
 
 class IsTrue extends IsNull
 {

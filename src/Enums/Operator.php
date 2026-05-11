@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hizpark\SqlCondition\Enums;
+namespace ChangHorizon\SqlCondition\Enums;
 
 /**
  * SQL 标准操作符枚举（缩写风格）

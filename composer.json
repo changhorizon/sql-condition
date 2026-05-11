@@ -1,5 +1,5 @@
 {
-    "name": "hizpark/sql-condition",
+    "name": "changhorizon/sql-condition",
     "description": "A PHP library for building and managing SQL WHERE conditions with a flexible, object-oriented approach.",
     "keywords": [],
     "type": "library",
@@ -21,12 +21,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Hizpark\\SqlCondition\\": "src/"
+            "ChangHorizon\\SqlCondition\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hizpark\\SqlCondition\\Tests\\": "tests/"
+            "ChangHorizon\\SqlCondition\\Tests\\": "tests/"
         }
     },
     "scripts": {
