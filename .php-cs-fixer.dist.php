@@ -20,6 +20,7 @@ return $config
         // ==================== 基礎規範 ====================
         '@PSR12'                => true,
         '@PHP8x4Migration'      => true,
+        'new_expression_parentheses' => false,
         'declare_strict_types'  => true,
         'strict_param'          => true,
 
