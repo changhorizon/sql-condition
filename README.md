@@ -6,12 +6,13 @@
 ![Latest Version](https://img.shields.io/packagist/v/changhorizon/sql-condition?style=flat-square)
 ![PHP Version](https://img.shields.io/badge/php-8.3--8.4-blue?style=flat-square)
 ![Static Analysis](https://img.shields.io/badge/static_analysis-PHPStan-blue?style=flat-square)
+![Tests](https://img.shields.io/badge/tests-PHPUnit-brightgreen?style=flat-square)
 [![codecov](https://codecov.io/gh/changhorizon/sql-condition/branch/main/graph/badge.svg)](https://codecov.io/gh/changhorizon/sql-condition)
 ![CI](https://github.com/changhorizon/sql-condition/actions/workflows/ci.yml/badge.svg?style=flat-square)
 
 Build SQL WHERE clauses programmatically with a clean, type-safe, and composable expression system. Supports 16 SQL operators with named parameter binding for PDO.
 
-## Features
+## ✨ 特性
 
 - 16 SQL operators: comparison (`=`, `<>`, `>`, `>=`, `<`, `<=`), pattern matching (`LIKE`, `NOT LIKE`), set membership (`IN`, `NOT IN`), range (`BETWEEN`, `NOT BETWEEN`), null checks (`IS NULL`, `IS NOT NULL`), boolean (`IS TRUE`, `IS FALSE`)
 - Named parameter (`:value_column`) output for PDO prepared statements
@@ -20,13 +21,13 @@ Build SQL WHERE clauses programmatically with a clean, type-safe, and composable
 - Static factory `Expression::EQ()`, `Expression::GT()`, etc. for concise expression creation
 - Zero runtime dependencies, PHP 8.3+ with strict types
 
-## Installation
+## 📦 安装
 
 ```bash
 composer require changhorizon/sql-condition
 ```
 
-## Directory Structure
+## 📂 目录结构
 
 ```txt
 src/
@@ -46,12 +47,12 @@ src/
     └── ExpressionInterface.php
 ```
 
-## Usage
+## 🚀 用法示例
 
 ### Basic Expressions
 
 ```php
-use Hizpark\SqlCondition\Expression;
+use ChangHorizon\SqlCondition\Expression;
 
 // Simple conditions
 $eq  = Expression::EQ('name', 'John');
@@ -66,8 +67,8 @@ $eq->getParams();  // [':value_name' => 'John']
 ### Combining with Condition (AND)
 
 ```php
-use Hizpark\SqlCondition\Condition;
-use Hizpark\SqlCondition\Expression;
+use ChangHorizon\SqlCondition\Condition;
+use ChangHorizon\SqlCondition\Expression;
 
 $cond = new Condition([
     Expression::EQ('name', 'John'),
@@ -82,8 +83,8 @@ $cond->getParams();  // [':value_name' => 'John', ':value_age' => '18']
 ### Combining with Condition (OR)
 
 ```php
-use Hizpark\SqlCondition\Condition;
-use Hizpark\SqlCondition\Enums\Logic;
+use ChangHorizon\SqlCondition\Condition;
+use ChangHorizon\SqlCondition\Enums\Logic;
 
 $cond = new Condition([
     Expression::EQ('role', 'admin'),
@@ -112,8 +113,8 @@ $cond->getString();  // "(role = :value_role OR role = :value_role) AND is_activ
 ### LIKE with Anchors
 
 ```php
-use Hizpark\SqlCondition\Enums\Anchor;
-use Hizpark\SqlCondition\Expressions\Like;
+use ChangHorizon\SqlCondition\Enums\Anchor;
+use ChangHorizon\SqlCondition\Expressions\Like;
 
 // Default (both sides): %value%
 new Like('title', 'hello')->getParams();       // [':value_title' => '%:hello%']
@@ -138,7 +139,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->execute($cond->getParams());
 ```
 
-## API
+## 📐 接口说明
 
 ### `ExpressionInterface`
 
@@ -169,26 +170,35 @@ $stmt->execute($cond->getParams());
 | `LIKE($col, $pattern)` | Like | `col LIKE :val` |
 | `NOT_LIKE($col, $pattern)` | NotLike | `col NOT LIKE :val` |
 
-## Static Analysis
+## 🔍 静态分析
 
 ```bash
 composer stan
 ```
 
-## Code Style
+## 🎯 代码风格
 
 ```bash
 composer cs:chk    # check
 composer cs:fix    # auto-fix
 ```
 
-## Tests
+## ✅ 单元测试
 
 ```bash
 composer test
 composer test:coverage
 ```
 
-## License
+## 📜 License
 
 MIT License. See [LICENSE](LICENSE) for details.
+
+## 🤝 贡献指南
+
+欢迎 Issue 与 PR，建议遵循以下流程：
+
+1. Fork 仓库
+2. 创建新分支进行开发
+3. 提交 PR 前请确保测试通过、风格一致
+4. 提交详细描述
