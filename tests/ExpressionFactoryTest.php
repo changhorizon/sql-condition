@@ -22,6 +22,7 @@ use ChangHorizon\SqlCondition\Expressions\NotEqual;
 use ChangHorizon\SqlCondition\Expressions\NotIn;
 use ChangHorizon\SqlCondition\Expressions\NotLike;
 use PHPUnit\Framework\TestCase;
+use ReflectionClass;
 
 class ExpressionFactoryTest extends TestCase
 {
@@ -123,7 +124,7 @@ class ExpressionFactoryTest extends TestCase
 
     public function testPrivateConstructorCannotBeInstantiated(): void
     {
-        $ref = new \ReflectionClass(Expression::class);
+        $ref  = new ReflectionClass(Expression::class);
         $ctor = $ref->getConstructor();
         $this->assertNotNull($ctor);
         $this->assertTrue($ctor->isPrivate());

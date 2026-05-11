@@ -47,7 +47,7 @@ class ConditionTest extends TestCase
 
         $this->assertSame(
             '(role = :value_role OR is_active IS TRUE) AND login_count > :value_login_count',
-            $outer->getString()
+            $outer->getString(),
         );
     }
 
