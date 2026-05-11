@@ -16,10 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['8.2', '8.3', '8.4']
+        php: ['8.3', '8.4']
         include:
-          - php: '8.2'
-            coverage: 'false'
           - php: '8.3'
             coverage: 'true'
           - php: '8.4'
@@ -33,7 +31,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: vendor
-          key: ${{ runner.os }}-php-${{ matrix.php }}-composer-${{ hashFiles('composer.lock') }}
+          key: ${{ runner.os }}-php-${{ matrix.php }}-composer-${{ hashFiles('composer.json') }}
           restore-keys: |
             ${{ runner.os }}-php-${{ matrix.php }}-composer-
 
@@ -45,7 +43,7 @@ jobs:
           coverage: ${{ matrix.coverage == 'true' && 'xdebug' || 'none' }}
 
       - name: 📥 Install Composer Dependencies
-        run: composer install --no-interaction --prefer-dist --no-progress
+        run: composer update --ignore-platform-req=php --no-interaction --prefer-dist --no-progress
 
       - name: 🔍 PHPStan
         run: composer run stan -- --error-format=github
