@@ -33,8 +33,8 @@ return [
     '8.3'     => '', // e.g., '8.2'
     'Harper Jang'     => '', // e.g., 'Harper Jang'
     'harper.jang@outlook.com'    => '', // e.g., 'harper.jang@outlook.com'
-    'Hizpark\\SqlCondition'   => '', // e.g., 'Hizpark\\ExampleProject'
-    'Hizpark\\SqlCondition\\Tests' => '', // e.g., 'Hizpark\\ExampleProject\\Tests'
+    'ChangHorizon\\SqlCondition'   => '', // e.g., 'ChangHorizon\\ExampleProject'
+    'ChangHorizon\\SqlCondition\\Tests' => '', // e.g., 'ChangHorizon\\ExampleProject\\Tests'
 
     // ─── phpunit.xml.dist ───────────────────────────────────────────
     'SqlCondition'       => '', // e.g., 'ExampleProject'
