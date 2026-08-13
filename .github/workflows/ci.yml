@@ -43,7 +43,7 @@ jobs:
           coverage: ${{ matrix.coverage == 'true' && 'xdebug' || 'none' }}
 
       - name: 📥 Install Composer Dependencies
-        run: composer update --ignore-platform-req=php --no-interaction --prefer-dist --no-progress
+        run: composer update --no-interaction --prefer-dist --no-progress
 
       - name: 🔍 PHPStan
         run: composer run stan -- --error-format=github
